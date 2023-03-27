@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  {{> head}} 
+  <body>
+    <div class="container">
+    {{> header}}
+    <br />
+    {{#entries}}
+    <a href="{{{url}}}"><h1 class="entrytitle {{metadata.format}}">{{title}}</h1></a>
+    <p class="date {{metadate.format}}">{{date}}</p>
+    <div class="entrybody {{metadata.format}}">{{{body}}}</div>
+    <hr class="entrydivider">
+    {{/entries}} 
+            {{#pagination}}
+        <div class="pagination">
+          {{#previous}}
+            <a href="/page/{{previous}}" style="border-bottom: 1px solid;float:right;">Newer &rarr; </a>
+          {{/previous}}
+          Page {{current}} of {{total}}
+          {{#next}}
+            <a href="/page/{{next}}" style="border-bottom: 1px solid;float:left;">&larr; Older</a>
+          {{/next}}
+        </div>
+        {{/pagination}}
+            <hr class="entrydivider">
+    {{> footer}}    
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  {{> head}} 
+  <body>
+    <div class="container">
+    {{> header}}
+    <br />
+    {{#allEntries}}
+    <p class="date">{{date}}</p>
+    <p class="archive {{metadata.format}}"><a href="{{{url}}}">{{title}}</a></p>
+    {{/allEntries}}   
+    	<hr class="entrydivider">
+    {{> footer}}    
+    </div>
+  </body>
+</html>
