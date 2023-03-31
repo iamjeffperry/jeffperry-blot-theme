@@ -8,6 +8,7 @@
 
     /* Custom Colors */
 
+    /* Old HTML Colors 
     html {
       --jpBlue: #0065d8;
       --jpOrange: #ff4e08;
@@ -20,6 +21,23 @@
       --jpLightGray: #c8c8c8;
       --jpDarkGray: #484848;
       --jpWhite: #ffffff;
+    }
+    */
+
+    html {
+      --jpBlue: #0084e9;
+      --jpOrange: #f56200;
+      --jpYellow: #efc551;
+      --jpPurple: #7353ba;
+      --jpRed: #d30000;
+      --jpGreen: #1DBB00;
+      --jpTeal: #00BFFF;
+      --jpPink: #FF69B4;
+      --jpBlack: #000000;
+      --jpLightGray: #c8c8c8;
+      --jpDarkGray: #484848;
+      --jpWhite: #ffffff;
+      --jpGarkBG: #202020;
     }
 
   body {
@@ -61,7 +79,8 @@
   }
 
   a {
-    background-color: transparent
+    background-color: transparent;
+    text-decoration:none;
   }
 
   a:active,
@@ -666,7 +685,7 @@ p, blockquote {
 }
 
 img {
-  border-radius: 1.5rem;
+  border-radius: .5rem;
 }
 
 
@@ -676,6 +695,20 @@ img {
   } */
   .container {
     max-width: 90%;
+  }
+}
+
+@media (max-width:375px) {
+  a.menuitem {
+    color: var(--jpDarkGray);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+}
+
+@media (max-width:338px) {
+  img.avatarimg {
+    display:none;
   }
 }
 
@@ -701,12 +734,46 @@ p.tagline {
 .archive {
     margin-top: 0;
     }
+
+    .videoContainer embed, .videoContainer iframe, .videoContainer object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 1rem 0 0 0 !important;
+  }
+
+  div.postentry {margin: 2rem 0;}
+
+h1.entrytitle {
+    margin-left: 1.5em;
+    text-indent: -1.6em;
+}
+
+h1.entrytitle.audio:before, h1.entrytitle.standard:before {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+h1.entrytitle.video:before {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+p.date {
+  text-indent: 2.15em;
+}
+
+p.archive.date {
+  text-indent: 0;
+}
   /* Post Formats */
 
   /* Standard Post Format */
   h1.entrytitle.standard:before,
   a.entrytitle.standard:before {
-    content: "\f005  ";
+    content: "\f5ad  ";
     font-family: 'Font Awesome 6 Free';
     color: var(--jpOrange);
   }
@@ -743,32 +810,32 @@ p.tagline {
  a.entrytitle.journalism:before {
    content: "\f1ea  ";
    font-family: 'Font Awesome 6 Free';
-   color: var(--jpYellow);
+   color: var(--jpPink);
  }
 
  a.entries.journalism,
  .journalism h1 {
    text-decoration: none;
-   color: var(--jpYellow);
+   color: var(--jpPink);
  }
 
  h1.entrytitle.journalism,
  h1.entrytitle.journalism a {
-   color: var(--jpYellow);
+   color: var(--jpPink);
  }
 
  .journalism blockquote {
-   border-left: 3px solid var(--jpYellow);
+   border-left: 3px solid var(--jpPink);
  }
 
  .journalism a {
-   color: var(--jpYellow);
-   border-bottom: 1px solid var(--jpYellow);
+   color: var(--jpPink);
+   border-bottom: 1px solid var(--jpPink);
  }
 
  a.taglink.journalism {
    color: var(--jpWhite);
-   background: var(--jpYellow);
+   background: var(--jpPink);
    padding: 0.25rem;
    border-radius: 0.25rem;
 }
@@ -778,32 +845,32 @@ p.tagline {
  a.entrytitle.notetaking:before {
    content: "\f5ad  ";
    font-family: 'Font Awesome 6 Free';
-   color: var(--jpTeal);
+   color: var(--jpYellow);
  }
 
  a.entries.notetaking,
  .notetaking h1 {
    text-decoration: none;
-   color: var(--jpTeal);
+   color: var(--jpYellow);
  }
 
  h1.entrytitle.notetaking,
  h1.entrytitle.notetaking a {
-   color: var(--jpTeal);
+   color: var(--jpYellow);
  }
 
  .notetaking blockquote {
-   border-left: 3px solid var(--jpTeal);
+   border-left: 3px solid var(--jpYellow);
  }
 
  .notetaking a {
-   color: var(--jpTeal);
-   border-bottom: 1px solid var(--jpTeal);
+   color: var(--jpYellow);
+   border-bottom: 1px solid var(--jpYellow);
  }
 
  a.taglink.notetaking {
    color: var(--jpWhite);
-   background: var(--jpTeal);
+   background: var(--jpYellow);
    padding: 0.25rem;
    border-radius: 0.25rem;
 }
@@ -948,23 +1015,21 @@ p.tagline {
     border-radius: 0.25rem;
 }
 
-
 @media (prefers-color-scheme: dark) {
   html {
-    --jpBlue: #3490fa;
-    --jpOrange: #ff6c32;
-    --jpYellow: #ffc053;
-    --jpPurple: #cb53ff;
-    --jpRed: #ff3636;
-    --jpGreen: #5aff54;
-    --jpTeal: #00cdd1;
     --jpBlack: #ffffff;
     --jpLightGray: #202022;
     --jpDarkGray: #c8c8c8;
     --jpWhite: #000000;
+    --jpGreen: #39FF14;
+    --jpPurple: #d738ff;
+    --jpRed: #ff2b2b;
+    --jpBlue: #0f9fff;
+    --jpYellowold: #ffbb00;
+    --jpYellow: #efc551;
   }
   html {
-    background: var(--jpLightGray)
+    background: var(--jpGarkBG)
   }
   body {
     color: var(--jpBlack)

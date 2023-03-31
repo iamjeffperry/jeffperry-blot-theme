@@ -4,13 +4,12 @@
   <body>
     <div class="container">
     {{> header}}
-    <br />
     {{#entries}}
-    <a href="{{{url}}}"><h1 class="entrytitle {{metadata.format}}">{{title}}</h1></a>
+    <div class="postentry {{metadata.format}}"><a href="{{{url}}}"><h1 class="entrytitle {{metadata.format}}">{{title}}</h1></a>
     <p class="date {{metadate.format}}">{{date}}</p>
-    <div class="entrybody {{metadata.format}}">{{{body}}}</div>
-    <hr class="entrydivider">
+    </div>
     {{/entries}} 
+    <hr class="entrydivider">
             {{#pagination}}
         <div class="pagination">
           {{#previous}}
@@ -26,4 +25,4 @@
     {{> footer}}    
     </div>
   </body>
-</html>
+</html> 

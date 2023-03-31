@@ -4,14 +4,12 @@
   <body>
     <div class="container">
     {{> header}}
-    <br />
     {{#entry}}
         <h1 class="entrytitle {{metadata.format}}">{{{title}}}</h1>
         <a href="{{{url}}}"><p class="date {{metadata.format}}">{{date}}</p></a>
-        <span class="{{metadata.format}}">{{{body}}}</span>
+        <span class="{{metadata.format}}">{{{body}}}</span><br>
         {{#tags}}
-        <br>
-        <a class="taglink {{metadata.format}}" href="/tagged/{{slug}}">{{name}}</a>
+        <span><a class="taglink {{metadata.format}}" href="/tagged/{{slug}}" style="font-size:0.8rem;">{{name}}</a></span>
         {{/tags}}
     {{/entry}}
 
